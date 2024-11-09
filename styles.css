@@ -1,0 +1,50 @@
+/* Estilo geral */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    margin: 0;
+}
+
+header {
+    background-color: #444;
+    color: #fff;
+    padding: 1em;
+    text-align: center;
+}
+
+.content {
+    padding: 2em;
+    text-align: center;
+}
+
+.review-card {
+    background: #fff;
+    padding: 1em;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1.5em;
+    text-align: left;
+}
+
+.review-card h3 {
+    color: #444;
+}
+
+.review-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+footer {
+    background-color: #444;
+    color: #fff;
+    padding: 1em;
+    text-align: center;
+}
+
+.pure-button-custom {
+    background-color: #1e88e5;
+    color: #fff;
+}
