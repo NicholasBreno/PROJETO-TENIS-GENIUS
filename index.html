@@ -3,27 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TENIS GENIUS</title>
+    <title>Reviews de Tênis</title>
     <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/pure-min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <h1>Reviews de Tênis</h1>
-        <p>Confira as avaliações dos últimos lançamentos!</p>
+    <header class="pure-g header">
+        <div class="pure-u-1">
+            <h1>Reviews de Tênis</h1>
+            <div class="pure-form search-bar">
+                <input type="text" id="search-input" class="pure-input-rounded" placeholder="Pesquisar tênis...">
+                <button class="pure-button pure-button-primary" id="search-button">🔍</button>
+            </div>
+        </div>
     </header>
 
-    <div class="content">
-        <!-- Seção de Cards de Reviews -->
-        <div class="pure-g" id="reviews-section">
-            <!-- Cards serão inseridos via JavaScript -->
-        </div>
-        <button class="pure-button pure-button-custom" onclick="addReview()">Adicionar Review</button>
-    </div>
+    <main class="pure-g content" id="reviews-section">
+        <!-- Reviews serão carregados via JavaScript -->
+    </main>
 
-    <footer>
-        <p>&copy; 2024 Reviews de Tênis - Todos os direitos reservados.</p>
+
+    <footer class="pure-g footer">
+        <div class="pure-u-1">
+            <p>&copy; 2024 Reviews de Tênis - Todos os direitos reservados.</p>
+        </div>
     </footer>
+
+
+    
 
     <script src="scripts.js"></script>
 </body>

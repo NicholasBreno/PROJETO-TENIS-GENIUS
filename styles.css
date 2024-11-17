@@ -1,50 +1,153 @@
-/* Estilo geral */
+/* Estilo global para o corpo */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f9;
-    color: #333;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(120deg, #d9f1ff, #007bff);
     margin: 0;
+    color: #333;
+    padding: 0;
 }
 
-header {
-    background-color: #444;
+/* Header */
+header.header {
+    background: linear-gradient(90deg, #0048ff, #001f8e 85%);
     color: #fff;
-    padding: 1em;
-    text-align: center;
-}
-
-.content {
     padding: 2em;
     text-align: center;
 }
 
-.review-card {
-    background: #fff;
-    padding: 1em;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-bottom: 1.5em;
-    text-align: left;
+header h1 {
+    margin: 0;
+    font-size: 3em; /* Mais chamativo */
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    letter-spacing: 2px;
+    animation: pulse 2s infinite; /* Pulsação do título */
 }
 
-.review-card h3 {
-    color: #444;
+/* Animação pulsante */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Layout de reviews com grid do Pure CSS */
+.content {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2em;
+    padding: 2em;
+    letter-spacing: 1px
+}
+
+.review-card {
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    padding: 1.5em;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    box-sizing: border-box;
+    letter-spacing: 1px;
+}
+
+.review-card:hover {
+    transform: translateY(-5px) scale(1.05); /* Efeito de pulinho */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 .review-card img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 5px;
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 1em;
+    object-fit: cover;
 }
 
-footer {
-    background-color: #444;
+.review-card h3 {
+    font-size: 1.5em;
+    margin-bottom: 0.5em;
+    color: #333;
+    letter-spacing: 1px
+}
+
+.review-card p {
+    font-size: 1em;
+    margin-bottom: 1em;
+    color: #555;
+    letter-spacing: 1px
+}
+
+.review-card .nota {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #007bff;
+
+}
+
+/* Estilo para o botão de pesquisa */
+.search-bar {
+    margin-top: 1em;
+}
+
+.pure-button-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+    padding: 0.5em 1em;
+    border-radius: 4px;
     color: #fff;
-    padding: 1em;
+    font-size: 1em;
+    transition: background-color 0.3s;
+}
+
+.pure-button-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+
+/* Footer */
+footer.footer {
+    background: #001f8e;
+    color: #fff;
     text-align: center;
+    padding: 1em;
+    margin-top: 2em;
 }
 
-.pure-button-custom {
-    background-color: #1e88e5;
-    color: #fff;
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2em;
+    }
+
+    .content {
+        grid-template-columns: 1fr; /* Um único item por linha em telas pequenas */
+        padding: 1em;
+    }
+
+    .review-card {
+        padding: 1em;
+    }
 }
+
+a.btn-comprar {
+    display: inline-block;
+    background-color: #007BFF;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
