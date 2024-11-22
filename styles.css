@@ -1,7 +1,7 @@
 /* Estilo global para o corpo */
 body {
     font-family: 'Arial', sans-serif;
-    background: linear-gradient(120deg, #d9f1ff, #007bff);
+    background-color: #e0e0e0;
     margin: 0;
     color: #333;
     padding: 0;
@@ -9,7 +9,7 @@ body {
 
 /* Header */
 header.header {
-    background: linear-gradient(90deg, #0048ff, #001f8e 85%);
+    background: linear-gradient(90deg, #2d2d2d, #f5f5f5 200%);
     color: #fff;
     padding: 2em;
     text-align: center;
@@ -41,17 +41,17 @@ header h1 {
 /* Layout de reviews com grid do Pure CSS */
 .content {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
     gap: 2em;
     padding: 2em;
-    letter-spacing: 1px
+    letter-spacing: 0.5px
 }
 
 .review-card {
     background: #fff;
     border-radius: 8px;
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
-    padding: 1.5em;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 1.2em;
     text-align: center;
     transition: transform 0.3s, box-shadow 0.3s;
     display: flex;
@@ -63,7 +63,7 @@ header h1 {
 }
 
 .review-card:hover {
-    transform: translateY(-5px) scale(1.05); /* Efeito de pulinho */
+    transform: translateY(-5px);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
@@ -78,18 +78,17 @@ header h1 {
     font-size: 1.5em;
     margin-bottom: 0.5em;
     color: #333;
-    letter-spacing: 1px
+    font-weight: 600px;
 }
 
 .review-card p {
-    font-size: 1em;
-    margin-bottom: 1em;
-    color: #555;
-    letter-spacing: 1px
+    font-size: 0.9em;
+    color: #666;
+    margin-bottom: 1.5em;
 }
 
 .review-card .nota {
-    font-size: 1.2em;
+    font-size: 1.1em;
     font-weight: bold;
     color: #007bff;
 
@@ -97,42 +96,57 @@ header h1 {
 
 /* Estilo para o botão de pesquisa */
 .search-bar {
-    margin-top: 1em;
+    margin-top: 2em;
+    display:flex;
+    justify-content: center;
+    gap: 0.5em;
+}
+
+#search-input {
+    padding: 0,5em 1em;
+    font-size: 1em;
+    border-radius: 25px;
+    border: 1px solid #ccc;
+    background-color: #f8f8f8;
+    width: 250px;
+    transition: border-color 0.3s;
+}
+
+.pure-button-primary, .pure-button-secondary {
+    border-radius: 25px;
+    padding: 0.5em 1em;
+    font-size: 1em;
+    text-transform: uppercase;
+    transition: background-color 0.3s, transform 0.3s;
 }
 
 .pure-button-primary {
-    background-color: #007bff;
-    border-color: #007bff;
-    padding: 0.5em 1em;
-    border-radius: 4px;
+    background-color: #66bb6a;
+    border: 1px solid #66bb6a;
     color: #fff;
-    font-size: 1em;
-    transition: background-color 0.3s;
 }
 
 .pure-button-primary:hover {
-    background-color: #0056b3;
-    border-color: #0056b3;
+    background-color: #388e2c;
+    border-color: #388e2c;
+    transform: scale(1.05);
 }
 
 .pure-button-secondary {
-    background-color: white;
-    border-color: white;
-    padding: 0.5em 1em;
-    border-radius: 4px;
-    color: white;
-    font-size: 1em;
-    transition: background-color 0.3s;
+    background-color: white;    
+    border: 1px solid #66bb6a;
+    color: #66bb6a;
 }
 
 .pure-button-secondary:hover {
-    background-collor: gray;
-    border-color: gray;
+    background-color: #66bb6a;
+    border-color: #388e2c;
+    color: #fff
 }
 
 /* Footer */
 footer.footer {
-    background: #001f8e;
+    background: #2d2d2d;
     color: #fff;
     text-align: center;
     padding: 1em;

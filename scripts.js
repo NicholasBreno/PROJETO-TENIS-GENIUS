@@ -11,17 +11,6 @@ const reviews = [
         anoLancamento: 1982
     },
     {
-        marca: "New Balance",
-        modelo: "550",
-        imagem: "https://lojavirus.fbitsstatic.net/img/p/tenis-new-balance-550-white-black-bb550esi-75612/317505.jpg?w=1200&h=1200&v=no-value",
-        nota: 8,
-        descricao: "Com um visual inspirado nos anos 1980, o New Balance 550 é a escolha ideal para quem aprecia o streetwear com um toque retrô.",
-        material: "Couro, camurça, borracha",
-        situacoes: "Streetwear, casual",
-        valor: "R$ 649,00",
-        anoLancamento: 1985
-    },
-    {
         marca: "Adidas",
         modelo: "Yeezy 500",
         imagem: "https://droper-media.us-southeast-1.linodeobjects.com/1422022134336404.webp",
@@ -111,6 +100,17 @@ const reviews = [
     },
     {
         marca: "New Balance",
+        modelo: "550",
+        imagem: "https://lojavirus.fbitsstatic.net/img/p/tenis-new-balance-550-white-black-bb550esi-75612/317505.jpg?w=1200&h=1200&v=no-value",
+        nota: 8,
+        descricao: "Com um visual inspirado nos anos 1980, o New Balance 550 é a escolha ideal para quem aprecia o streetwear com um toque retrô.",
+        material: "Couro, camurça, borracha",
+        situacoes: "Streetwear, casual",
+        valor: "R$ 649,00",
+        anoLancamento: 1985
+    },
+    {
+        marca: "New Balance",
         modelo: "9060",
         imagem: "https://cdn.shoppub.io/cdn-cgi/image/w=1000,h=1000,q=80,f=auto/mkd/media/uploads/produtos/foto/mpaulqpb/tenis-new-balance-9060-rsacmarinho.jpg",
         nota: 9,
@@ -177,7 +177,6 @@ document.getElementById("clear-button").addEventListener("click", function() {
     document.getElementById("search-input").value = "";
     carregarReviews();
 });
-
 }
 
 // Inicializar a página carregando todos os reviews
