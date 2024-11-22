@@ -173,6 +173,11 @@ document.getElementById("search-input").addEventListener("keydown", function(eve
     }
 });
 
+document.getElementById("clear-button").addEventListener("click", function() {
+    document.getElementById("search-input").value = "";
+    carregarReviews();
+});
+
 }
 
 // Inicializar a página carregando todos os reviews
