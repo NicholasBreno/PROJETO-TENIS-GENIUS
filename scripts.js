@@ -139,7 +139,8 @@ function carregarReviews(filtro = "") {
     reviewsSection.innerHTML = "";
 
     const reviewsFiltrados = reviews.filter(review =>
-        review.modelo.toLowerCase().includes(filtro.toLowerCase())
+        review.modelo.toLowerCase().includes(filtro.toLowerCase()) ||
+        review.marca.toLowerCase().includes(filtro.toLowerCase())
     );
 
     reviewsFiltrados.forEach(review => {
@@ -162,6 +163,14 @@ function carregarReviews(filtro = "") {
 document.getElementById("search-button").addEventListener("click", function() {
     const filtro = document.getElementById("search-input").value;
     carregarReviews(filtro);
+});
+
+
+document.getElementById("search-input").addEventListener("keydown", function(event) {
+    if (event.key === "Enter") {
+        const filtro = document.getElementById("search-input").value;
+        carregarReviews(filtro); // Aciona a pesquisa ao pressionar Enter
+    }
 });
 
 }
